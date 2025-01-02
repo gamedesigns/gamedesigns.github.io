@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-book/chapter-04" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.0-beta.0">
+<title data-rh="true">Chapter 4: Game Theory Applications | Game Lore and Rules</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://gamedesigns.github.io/img/gamedesigns-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://gamedesigns.github.io/img/gamedesigns-social-card.jpg"><meta data-rh="true" property="og:url" content="https://gamedesigns.github.io/docs/book/chapter-04"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Chapter 4: Game Theory Applications | Game Lore and Rules"><meta data-rh="true" name="description" content="Decision Making"><meta data-rh="true" property="og:description" content="Decision Making"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://gamedesigns.github.io/docs/book/chapter-04"><link data-rh="true" rel="alternate" href="https://gamedesigns.github.io/docs/book/chapter-04" hreflang="en"><link data-rh="true" rel="alternate" href="https://gamedesigns.github.io/docs/book/chapter-04" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Game Lore and Rules RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Game Lore and Rules Atom Feed"><link rel="stylesheet" href="/assets/css/styles.a3ea5594.css">
+<script src="/assets/js/runtime~main.72f9489c.js" defer="defer"></script>
+<script src="/assets/js/main.65778a25.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">gamedesigns</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/category/development-of-game-mechanics-book">&gt;tutorial</a><a class="navbar__item navbar__link" href="/blog">&gt;blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/gamedesigns" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">&gt;github<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/docs/category/development-of-game-mechanics-book">Development of Game Mechanics (Book)</a><button aria-label="Collapse sidebar category &#x27;Development of Game Mechanics (Book)&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/book/intro">Introduction</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/book/chapter-01">Chapter 1: Foundations of Game Design</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/book/chapter-02">Chapter 2: Flow State Gameplay</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/book/chapter-03">Chapter 3: Behavioral Psychology</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/book/chapter-04">Chapter 4: Game Theory Applications</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/book/chapter-05">Chapter 5: Level Up Mechanics</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/book/chapter-06">Chapter 6: Platform-Specific Considerations</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/book/chapter-07">Chapter 7: Implementation and Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/book/chapter-08">Chapter 8: Future Trends</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/book/chapter-app">Appendices</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/book">Index</a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Tutorial Intro</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docs/category/tutorial---basics-docu">Tutorial - Basics (Docu)</a><button aria-label="Expand sidebar category &#x27;Tutorial - Basics (Docu)&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docs/category/tutorial---extras-docu">Tutorial - Extras (Docu)</a><button aria-label="Expand sidebar category &#x27;Tutorial - Extras (Docu)&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/category/development-of-game-mechanics-book"><span itemprop="name">Development of Game Mechanics (Book)</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Chapter 4: Game Theory Applications</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Chapter 4: Game Theory Applications</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="decision-making">Decision Making<a href="#decision-making" class="hash-link" aria-label="Direct link to Decision Making" title="Direct link to Decision Making">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="nash-equilibrium-in-game-design">Nash Equilibrium in Game Design<a href="#nash-equilibrium-in-game-design" class="hash-link" aria-label="Direct link to Nash Equilibrium in Game Design" title="Direct link to Nash Equilibrium in Game Design">​</a></h3>
+<p>&quot;The beauty of game theory lies not in the complexity of the math, but in the elegance of strategic interaction.&quot; - John Nash</p>
+<p>Nash equilibrium represents a state where no player can unilaterally improve their position by changing strategy. In game design, this concept helps create balanced systems where multiple strategies remain viable. Understanding Nash equilibrium allows designers to craft meaningful choice architectures that resist dominant strategy emergence.</p>
+<p>Consider how Street Fighter&#x27;s rock-paper-scissors dynamics between attacks, blocks, and throws create multiple viable strategies, or how StarCraft&#x27;s three races maintain competitive balance through distinct but equivalent capabilities. These systems demonstrate what economist Thomas Schelling calls &quot;strategic stability&quot; – situations where multiple approaches remain competitively viable.</p>
+<p>The implementation of Nash equilibrium requires careful attention to what designer Sid Meier calls &quot;interesting decisions&quot; – choices where multiple options have distinct advantages and drawbacks. Too strong synergies create dominant strategies, while too weak relationships produce arbitrary choices. The key is creating what game theorist Drew Fudenberg calls &quot;stable strategy sets&quot; – groups of approaches that remain competitive across different scenarios.</p>
+<p>Advanced Nash equilibrium design considers both pure strategy equilibria (consistent best responses) and mixed strategy equilibria (probabilistic approach selection). This creates what designer Richard Garfield calls &quot;meta-game depth&quot; – evolving strategic landscapes that maintain interest through multiple levels of strategic development.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="perfect-vs-imperfect-information">Perfect vs Imperfect Information<a href="#perfect-vs-imperfect-information" class="hash-link" aria-label="Direct link to Perfect vs Imperfect Information" title="Direct link to Perfect vs Imperfect Information">​</a></h3>
+<p>&quot;Information is power, but the art lies in deciding who knows what.&quot; - Reiner Knizia</p>
+<p>The distinction between perfect and imperfect information fundamentally shapes strategic depth in games. Perfect information games (like Chess) create depth through calculation and prediction, while imperfect information games (like Poker) generate complexity through probability assessment and psychological warfare.</p>
+<p>Consider how Hearthstone uses card draw randomness and hidden information to create tension, or how Diplomacy&#x27;s simultaneous move resolution creates uncertainty in alliance dynamics. These systems demonstrate what game theorist Drew Fudenberg calls &quot;information set design&quot; – carefully structured knowledge gaps that create strategic depth.</p>
+<p>The implementation of information systems requires careful attention to what designer Sid Meier calls &quot;satisfying uncertainty&quot; – unknowns that create excitement rather than frustration. Too much hidden information creates randomness, while too little reduces strategic depth. The key is creating what economist Thomas Schelling calls &quot;strategic uncertainty&quot; – situations where players must make informed decisions with incomplete information.</p>
+<p>Information design must consider both static information (fixed game rules and systems) and dynamic information (changing game states and player actions). This creates what designer Richard Garfield calls &quot;information horizons&quot; – boundaries between known and unknown that shape strategic decision-making.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="strategic-dominance">Strategic Dominance<a href="#strategic-dominance" class="hash-link" aria-label="Direct link to Strategic Dominance" title="Direct link to Strategic Dominance">​</a></h3>
+<p>&quot;A dominated strategy is worse than its alternatives in all scenarios - identifying these improves game clarity.&quot; - Roger Myerson</p>
+<p>Strategic dominance occurs when one option consistently outperforms others, potentially reducing strategic depth. However, clever design can use apparent dominance to create what game theorist Jörgen Weibull calls &quot;strategic tension&quot; – situations where seemingly dominant strategies have hidden weaknesses.</p>
+<p>Consider how Magic: The Gathering uses mana costs to balance powerful effects, or how Team Fortress 2&#x27;s class system ensures each role maintains unique strengths despite apparent power differences. These systems demonstrate what economist Paul Milgrom calls &quot;strategic complementarity&quot; – situations where apparent dominance is mitigated by context-dependent effectiveness.</p>
+<p>The implementation of strategic balance requires careful attention to what designer Mark Rosewater calls &quot;power curves&quot; – the relationship between resource investment and effect magnitude. Too flat curves reduce strategic depth, while too steep curves create power spikes. The key is creating what game theorist Ken Binmore calls &quot;strategic landscapes&quot; – multidimensional spaces where different approaches excel in different contexts.</p>
+<p>Advanced dominance design considers both strict dominance (always better) and weak dominance (sometimes better, never worse). This creates what designer Steve Jackson calls &quot;strategic texture&quot; – rich decision spaces where context determines optimal choices.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mixed-strategies">Mixed Strategies<a href="#mixed-strategies" class="hash-link" aria-label="Direct link to Mixed Strategies" title="Direct link to Mixed Strategies">​</a></h3>
+<p>&quot;The unpredictability of a strategy can be its greatest strength.&quot; - John von Neumann</p>
+<p>Mixed strategies introduce probabilistic decision-making into game systems, creating what game theorist John Harsanyi calls &quot;strategic uncertainty.&quot; These systems enable depth through unpredictability while maintaining competitive balance through long-term probability distributions.</p>
+<p>Consider how fighting games use mix-up systems to create uncertainty in attack patterns, or how Rocket League&#x27;s kickoff positions create probabilistic advantage scenarios. These systems demonstrate what economist Robert Aumann calls &quot;correlated equilibrium&quot; – situations where optimal play involves randomization within controlled parameters.</p>
+<p>The implementation of mixed strategies requires careful attention to what designer Skaff Elias calls &quot;decision granularity&quot; – the scale at which probabilistic choices occur. Too frequent randomization creates chaos, while too infrequent randomization reduces strategic depth. The key is creating what game theorist Herbert Gintis calls &quot;strategic randomization&quot; – controlled uncertainty that enhances rather than dominates strategic decision-making.</p>
+<p>Mixed strategy design must consider both explicit randomization (dice rolls, card draws) and implicit randomization (human unpredictability, mind games). This creates what designer Richard Garfield calls &quot;strategic horizons&quot; – layered decision spaces where probability management becomes a key skill.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="counterplay-design">Counterplay Design<a href="#counterplay-design" class="hash-link" aria-label="Direct link to Counterplay Design" title="Direct link to Counterplay Design">​</a></h3>
+<p>&quot;Every strong strategy should have meaningful counterplay options.&quot; - David Sirlin</p>
+<p>Counterplay systems create what game theorist Robert Wilson calls &quot;strategic response space&quot; – the opportunity for players to react and adapt to opponent strategies. Effective counterplay design ensures that every powerful approach has viable responses without creating perfect counters that dominate the original strategy.</p>
+<p>Consider how MOBAs use item builds and hero counters to create dynamic adaptation opportunities, or how card games use sideboard mechanics to enable strategic adjustment between games. These systems demonstrate what economist David Kreps calls &quot;sequential rationality&quot; – the importance of maintaining strategic viability across multiple decision points.</p>
+<p>The implementation of counterplay requires careful attention to what designer Greg Street calls &quot;response windows&quot; – opportunities for strategic adaptation. Too narrow windows create frustration, while too broad windows reduce strategic commitment importance. The key is creating what game theorist Roger Myerson calls &quot;strategic equilibrium&quot; – balance between proactive and reactive play.</p>
+<p>Counterplay design must consider both hard counters (direct responses) and soft counters (tactical adaptations). This creates what designer Mark Rosewater calls &quot;strategic depth gradients&quot; – multiple levels of strategic interaction that reward both knowledge and execution.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="economic-systems">Economic Systems<a href="#economic-systems" class="hash-link" aria-label="Direct link to Economic Systems" title="Direct link to Economic Systems">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="virtual-economies">Virtual Economies<a href="#virtual-economies" class="hash-link" aria-label="Direct link to Virtual Economies" title="Direct link to Virtual Economies">​</a></h3>
+<p>&quot;Virtual economies mirror real ones, but with the advantage of designer control.&quot; - Edward Castronova</p>
+<p>Virtual economies create what economist Edward Castronova calls &quot;synthetic worlds&quot; – designed economic spaces that can be carefully controlled and adjusted. These systems must balance player engagement with economic stability, creating meaningful economic activity without succumbing to real-world economic problems.</p>
+<p>Consider how Eve Online&#x27;s player-driven economy creates emergent complexity, or how Path of Exile&#x27;s currency items serve both economic and gameplay functions. These systems demonstrate what economist Yanis Varoufakis calls &quot;designed markets&quot; – economic spaces that serve both gameplay and social functions.</p>
+<p>The implementation of virtual economies requires careful attention to what designer Adam Smith calls &quot;economic loops&quot; – cycles of resource generation, transformation, and consumption. Too loose economies create inflation, while too tight economies stifle activity. The key is creating what economist Robin Hanson calls &quot;economic equilibrium&quot; – balanced systems that maintain value while enabling meaningful transaction.</p>
+<p>Virtual economy design must consider both primary markets (direct game systems) and secondary markets (player-to-player trading). This creates what economist Tyler Cowen calls &quot;market layers&quot; – multiple interconnected economic systems that create depth through interaction.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="trading-mechanics">Trading Mechanics<a href="#trading-mechanics" class="hash-link" aria-label="Direct link to Trading Mechanics" title="Direct link to Trading Mechanics">​</a></h3>
+<p>&quot;Trade creates value through mutual benefit.&quot; - David Ricardo</p>
+<p>Trading systems enable what economist F.A. Hayek calls &quot;distributed knowledge utilization&quot; – the ability for players to benefit from specialization and exchange. Effective trading mechanics create social interaction opportunities while maintaining game balance and preventing exploitation.</p>
+<p>Consider how Team Fortress 2&#x27;s item trading system created a meta-game of collection and exchange, or how Monster Hunter&#x27;s material trading enables cooperative gameplay through resource sharing. These systems demonstrate what economist Ronald Coase calls &quot;transaction cost management&quot; – the importance of making beneficial trades accessible while preventing market manipulation.</p>
+<p>The implementation of trading systems requires careful attention to what designer Richard Garfield calls &quot;trade friction&quot; – barriers to exchange that prevent market dominance without stifling beneficial trading. Too easy trading creates market flooding, while too difficult trading reduces social interaction. The key is creating what economist Oliver Williamson calls &quot;transaction frameworks&quot; – structured systems that enable fair and engaging trade.</p>
+<p>Advanced trading design considers both item-based trading and service-based trading (carrying, crafting, coaching). This creates what economist Kenneth Arrow calls &quot;market completeness&quot; – systems that enable various forms of valuable exchange.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="inflation-control">Inflation Control<a href="#inflation-control" class="hash-link" aria-label="Direct link to Inflation Control" title="Direct link to Inflation Control">​</a></h3>
+<p>&quot;The value of everything depends on the supply of everything else.&quot; - John Maynard Keynes</p>
+<p>Inflation control represents one of the most critical challenges in virtual economy design. These systems must maintain currency value while providing satisfying rewards, creating what economist Milton Friedman calls &quot;monetary stability&quot; in a designed environment.</p>
+<p>Consider how World of Warcraft uses soul-binding and repair costs to remove currency from the economy, or how Diablo III&#x27;s seasonal resets prevent long-term inflation. These systems demonstrate what economist Thomas Sargent calls &quot;expectations management&quot; – the importance of maintaining faith in currency value.</p>
+<p>The implementation of inflation control requires careful attention to what designer Jeff Grubb calls &quot;currency velocity&quot; – the rate at which money moves through the economy. Too high velocity creates inflation, while too low velocity stifles activity. The key is creating what economist Irving Fisher calls &quot;monetary equilibrium&quot; – balanced currency flow that maintains stable values.</p>
+<p>Advanced inflation control considers both currency inflation (money supply growth) and item inflation (item value depreciation). This creates what economist Robert Shiller calls &quot;value stability frameworks&quot; – systems that maintain meaningful progression while preventing economic collapse.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="resource-sinks">Resource Sinks<a href="#resource-sinks" class="hash-link" aria-label="Direct link to Resource Sinks" title="Direct link to Resource Sinks">​</a></h3>
+<p>&quot;Every economy needs its drains as well as its faucets.&quot; - Vili Lehdonvirta</p>
+<p>Resource sinks create what economist Kenneth Boulding calls &quot;economic sustainability&quot; – systems that remove resources from the economy to maintain value. Effective sink design makes resource consumption meaningful while preventing excessive value destruction.</p>
+<p>Consider how MMORPGs use repair costs and consumable items to maintain currency value, or how crafting games use material consumption to maintain resource scarcity. These systems demonstrate what economist Nicholas Kaldor calls &quot;circular flow maintenance&quot; – the importance of balanced resource inflow and outflow.</p>
+<p>The implementation of resource sinks requires careful attention to what designer Raph Koster calls &quot;sink satisfaction&quot; – making resource consumption feel meaningful rather than punitive. Too aggressive sinks create frustration, while too weak sinks allow resource accumulation. The key is creating what economist Joseph Schumpeter calls &quot;creative destruction&quot; – meaningful resource consumption that enhances gameplay.</p>
+<p>Advanced sink design considers both hard sinks (permanent resource removal) and soft sinks (temporary resource lockup). This creates what economist Paul Samuelson calls &quot;economic dynamics&quot; – systems that maintain value through controlled resource flow.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="market-dynamics">Market Dynamics<a href="#market-dynamics" class="hash-link" aria-label="Direct link to Market Dynamics" title="Direct link to Market Dynamics">​</a></h3>
+<p>&quot;Markets are conversations between supply and demand.&quot; - Chris Anderson</p>
+<p>Market dynamics create what economist Friedrich Hayek calls &quot;spontaneous order&quot; – emergent economic behaviors that arise from player interactions. These systems must balance freedom of trade with game stability, creating engaging economic gameplay without destructive market manipulation.</p>
+<p>Consider how Steam&#x27;s Community Market enables player-driven pricing while maintaining transaction controls, or how Guild Wars 2&#x27;s Trading Post creates market efficiency through buy and sell orders. These systems demonstrate what economist Vernon Smith calls &quot;market institution design&quot; – frameworks that enable beneficial trade while preventing exploitation.</p>
+<p>The implementation of market systems requires careful attention to what designer Jon Shafer calls &quot;market granularity&quot; – the scale at which price discovery and trade occur. Too fine granularity creates manipulation opportunities, while too coarse granularity reduces market efficiency. The key is creating what economist Leon Walras calls &quot;market clearing&quot; – efficient systems for matching buyers and sellers.</p>
+<p>Advanced market design considers both spot markets (immediate trades) and futures markets (promised exchanges). This creates what economist Robert Merton calls &quot;market completeness&quot; – systems that enable various forms of economic interaction while maintaining game balance.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="multiplayer-dynamics">Multiplayer Dynamics<a href="#multiplayer-dynamics" class="hash-link" aria-label="Direct link to Multiplayer Dynamics" title="Direct link to Multiplayer Dynamics">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="zero-sum-vs-non-zero-sum-design">Zero-sum vs Non-zero-sum Design<a href="#zero-sum-vs-non-zero-sum-design" class="hash-link" aria-label="Direct link to Zero-sum vs Non-zero-sum Design" title="Direct link to Zero-sum vs Non-zero-sum Design">​</a></h3>
+<p>&quot;The greatest games create value beyond winning and losing.&quot; - James P. Carse</p>
+<p>The balance between zero-sum and non-zero-sum interactions fundamentally shapes multiplayer experiences. Zero-sum design (where one player&#x27;s gain equals another&#x27;s loss) creates intense competition, while non-zero-sum design enables cooperation and mutual benefit.</p>
+<p>Consider how Battle Royale games create zero-sum competition for survival, while MMORPGs enable non-zero-sum cooperation through group content. These systems demonstrate what game theorist Robert Wright calls &quot;non-zero-sumness&quot; – the potential for mutual benefit through cooperation.</p>
+<p>The implementation of sum relationships requires careful attention to what designer Ernest Adams calls &quot;competitive texture&quot; – the balance between rivalrous and non-rivalrous interactions. Too much zero-sum creates toxicity, while too much non-zero-sum reduces competitive tension. The key is creating what economist Robert Axelrod calls &quot;cooperation under anarchy&quot; – systems that enable both competition and cooperation.</p>
+<p>Advanced sum design considers both resource competition (zero-sum) and value creation (non-zero-sum). This creates what designer Jane McGonigal calls &quot;collaborative competition&quot; – frameworks that reward both individual excellence and group achievement.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="prisoners-dilemma-in-gameplay">Prisoner&#x27;s Dilemma in Gameplay<a href="#prisoners-dilemma-in-gameplay" class="hash-link" aria-label="Direct link to Prisoner&#x27;s Dilemma in Gameplay" title="Direct link to Prisoner&#x27;s Dilemma in Gameplay">​</a></h3>
+<p>&quot;Trust is built through repeated interaction.&quot; - Robert Axelrod</p>
+<p>The Prisoner&#x27;s Dilemma provides a fundamental framework for understanding strategic cooperation and betrayal in games. These systems create what game theorist Anatol Rapoport calls &quot;strategic tension&quot; between short-term individual benefit and long-term collective good.</p>
+<p>Consider how Among Us creates trust and betrayal dynamics through role deception, or how Dark Souls&#x27; invasion system enables both hostile and cooperative interactions. These systems demonstrate what economist Robert Axelrod calls &quot;the evolution of cooperation&quot; – how repeated interaction can foster beneficial behavior.</p>
+<p>The implementation of dilemma situations requires careful attention to what designer Dan Cook calls &quot;trust architecture&quot; – systems that make cooperation viable while maintaining betrayal risk. Too high betrayal cost prevents trust formation, while too low cost enables exploitation. The key is creating what game theorist Martin Nowak calls &quot;cooperative equilibrium&quot; – balance between trust and verification.</p>
+<p>Advanced dilemma design considers both explicit dilemmas (clear choice points) and implicit dilemmas (emergent social situations). This creates what sociologist James Coleman calls &quot;social capital systems&quot; – frameworks for building and leveraging trust.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="coalition-formation">Coalition Formation<a href="#coalition-formation" class="hash-link" aria-label="Direct link to Coalition Formation" title="Direct link to Coalition Formation">​</a></h3>
+<p>&quot;Alliances should be fluid but meaningful.&quot; - Bruce Geryk</p>
+<p>Coalition systems enable what political scientist William Riker calls &quot;minimum winning coalitions&quot; – groups that are large enough to achieve objectives but small enough to maximize individual benefit. These systems create dynamic social interaction while maintaining competitive balance.</p>
+<p>Consider how Diplomacy&#x27;s alliance mechanics create complex negotiation and betrayal opportunities, or how EVE Online&#x27;s corporation system enables large-scale political gameplay. These systems demonstrate what sociologist Georg Simmel calls &quot;social geometry&quot; – the importance of group size and structure in strategic interaction.</p>
+<p>The implementation of coalition mechanics requires careful attention to what designer Raph Koster calls &quot;social scaling&quot; – how group dynamics change with size. Too small groups limit social complexity, while too large groups reduce individual importance. The key is creating what political scientist Mancur Olson calls &quot;collective action frameworks&quot; – systems that enable effective group coordination while maintaining individual agency.</p>
+<p>Advanced coalition design considers both formal alliances (explicit game mechanics) and informal coalitions (emergent social groups). This creates what sociologist Bruno Latour calls &quot;actor networks&quot; – complex webs of social and strategic relationship.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tournament-design">Tournament Design<a href="#tournament-design" class="hash-link" aria-label="Direct link to Tournament Design" title="Direct link to Tournament Design">​</a></h3>
+<p>&quot;Competition is most meaningful when it&#x27;s fair and structured.&quot; - David Sirlin</p>
+<p>Tournament systems create what sociologist Pierre Bourdieu calls &quot;fields of competition&quot; – structured environments for meaningful competitive play. Effective tournament design balances accessibility with competitive integrity, creating engaging events for participants of all skill levels.</p>
+<p>Consider how Magic: The Gathering&#x27;s Swiss tournament system enables competitive play while maintaining engagement for all participants, or how League of Legends&#x27; ranked seasons create long-term competitive progression. These systems demonstrate what economist Roger Noll calls &quot;competitive balance&quot; – the importance of matching players of similar skill.</p>
+<p>The implementation of tournament systems requires careful attention to what designer Richard Garfield calls &quot;tournament texture&quot; – the variety of competitive experiences available to players. Too rigid structure reduces accessibility, while too loose structure reduces competitive integrity. The key is creating what sociologist Allen Guttmann calls &quot;structured competition&quot; – frameworks that enable meaningful competition at various levels.</p>
+<p>Advanced tournament design considers both elimination formats (knockout competition) and persistence formats (league play). This creates what sports economist Stefan Szymanski calls &quot;competitive architecture&quot; – systems that maintain engagement across different competitive intensities.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rating-systems">Rating Systems<a href="#rating-systems" class="hash-link" aria-label="Direct link to Rating Systems" title="Direct link to Rating Systems">​</a></h3>
+<p>&quot;Good ratings reflect skill while encouraging improvement.&quot; - Mark Glickman</p>
+<p>Rating systems create what psychologist Claude Steele calls &quot;identity safety&quot; – environments where players can compete without fear of inappropriate matching. Effective rating design provides accurate skill assessment while maintaining motivation for improvement.</p>
+<p>Consider how Chess&#x27;s Elo rating system enables accurate skill matching, or how Overwatch&#x27;s skill rating creates meaningful progression through competitive play. These systems demonstrate what statistician Bradley-Terry calls &quot;paired comparison structure&quot; – frameworks for assessing relative skill through competition.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rating-systems-continued">Rating Systems (continued)<a href="#rating-systems-continued" class="hash-link" aria-label="Direct link to Rating Systems (continued)" title="Direct link to Rating Systems (continued)">​</a></h3>
+<p>The implementation of rating systems requires careful attention to what designer Josh Menke calls &quot;rating volatility&quot; – how quickly ratings change in response to performance. Too high volatility creates instability, while too low volatility reduces motivation. The key is creating what statistician Arpad Elo calls &quot;rating equilibrium&quot; – balanced systems that accurately reflect skill while maintaining competitive engagement.</p>
+<p>Modern rating systems must consider multiple factors beyond simple win-loss records. These include:</p>
+<ol>
+<li>Performance Metrics</li>
+</ol>
+<ul>
+<li>Score differentials</li>
+<li>Individual contributions</li>
+<li>Role-specific performance</li>
+<li>Consistency measures</li>
+</ul>
+<ol start="2">
+<li>Contextual Factors</li>
+</ol>
+<ul>
+<li>Opposition strength</li>
+<li>Team composition</li>
+<li>Map/mode specific performance</li>
+<li>Time-based decay</li>
+</ul>
+<ol start="3">
+<li>Social Elements</li>
+</ol>
+<ul>
+<li>Sportsmanship ratings</li>
+<li>Communication effectiveness</li>
+<li>Team synergy</li>
+<li>Leadership contributions</li>
+</ul>
+<p>Advanced rating design must also address what psychologist Carol Dweck calls &quot;growth mindset promotion&quot; – systems that encourage skill development rather than just measurement. This might include:</p>
+<ol>
+<li>Progress Visualization</li>
+</ol>
+<ul>
+<li>Skill breakdown by category</li>
+<li>Historical performance trends</li>
+<li>Comparison with peer groups</li>
+<li>Improvement metrics</li>
+</ul>
+<ol start="2">
+<li>Learning Support</li>
+</ol>
+<ul>
+<li>Performance analysis tools</li>
+<li>Skill development suggestions</li>
+<li>Practice mode recommendations</li>
+<li>Coaching system integration</li>
+</ul>
+<ol start="3">
+<li>Social Development</li>
+</ol>
+<ul>
+<li>Mentorship programs</li>
+<li>Team formation assistance</li>
+<li>Community contribution recognition</li>
+<li>Positive behavior reinforcement</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="concluding-thoughts-on-game-theory-applications">Concluding Thoughts on Game Theory Applications<a href="#concluding-thoughts-on-game-theory-applications" class="hash-link" aria-label="Direct link to Concluding Thoughts on Game Theory Applications" title="Direct link to Concluding Thoughts on Game Theory Applications">​</a></h3>
+<p>The application of game theory to digital game design represents what economist Thomas Schelling calls &quot;strategic thinking in system design&quot; – the careful construction of frameworks that enable meaningful strategic interaction. These applications operate across multiple dimensions:</p>
+<ol>
+<li>Strategic Framework
+&quot;Every game is a designed conversation between players.&quot; - Sid Meier</li>
+</ol>
+<p>Game theory provides the theoretical foundation for creating what designer Raph Koster calls &quot;strategy spaces&quot; – environments where meaningful decisions emerge from carefully crafted systems. This includes:</p>
+<ul>
+<li>
+<p>Decision Architecture</p>
+<ul>
+<li>Choice granularity</li>
+<li>Information availability</li>
+<li>Response timing</li>
+<li>Commitment mechanisms</li>
+</ul>
+</li>
+<li>
+<p>Balance Systems</p>
+<ul>
+<li>Counter mechanisms</li>
+<li>Resource management</li>
+<li>Power curves</li>
+<li>Strategic diversity</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>Economic Design
+&quot;Virtual economies are laboratories for economic theory.&quot; - Edward Castronova</li>
+</ol>
+<p>The application of economic principles creates what designer Eve Online&#x27;s economist Eyjólfur Guðmundsson calls &quot;designed markets&quot; – controlled environments for meaningful economic interaction. Key considerations include:</p>
+<ul>
+<li>
+<p>Value Systems</p>
+<ul>
+<li>Currency design</li>
+<li>Resource flow</li>
+<li>Inflation control</li>
+<li>Market mechanisms</li>
+</ul>
+</li>
+<li>
+<p>Trading Frameworks</p>
+<ul>
+<li>Exchange systems</li>
+<li>Price discovery</li>
+<li>Transaction costs</li>
+<li>Market segmentation</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>Social Architecture
+&quot;Games are fundamentally social experiences.&quot; - Jane McGonigal</li>
+</ol>
+<p>The integration of social dynamics creates what sociologist Bruno Latour calls &quot;actor-networks&quot; – complex webs of strategic and social interaction. This encompasses:</p>
+<ul>
+<li>
+<p>Competitive Frameworks</p>
+<ul>
+<li>Tournament systems</li>
+<li>Rating mechanisms</li>
+<li>Progression structures</li>
+<li>Achievement recognition</li>
+</ul>
+</li>
+<li>
+<p>Cooperative Systems</p>
+<ul>
+<li>Alliance mechanics</li>
+<li>Team formation</li>
+<li>Resource sharing</li>
+<li>Collective achievement</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li>Future Directions</li>
+</ol>
+<p>The future of game theory applications in game design points toward what economist Herbert Simon calls &quot;bounded rationality in designed environments&quot; – systems that acknowledge and work with human cognitive limitations while creating engaging strategic depth. This might include:</p>
+<ol>
+<li>Adaptive Systems</li>
+</ol>
+<ul>
+<li>Dynamic difficulty adjustment</li>
+<li>Personalized challenge scaling</li>
+<li>Learning curve optimization</li>
+<li>Skill-based matchmaking</li>
+</ul>
+<ol start="2">
+<li>Economic Evolution</li>
+</ol>
+<ul>
+<li>Blockchain integration</li>
+<li>Player-owned economies</li>
+<li>Cross-game markets</li>
+<li>Economic AI agents</li>
+</ul>
+<ol start="3">
+<li>Social Innovation</li>
+</ol>
+<ul>
+<li>Reputation systems</li>
+<li>Trust frameworks</li>
+<li>Coalition mechanics</li>
+<li>Community governance</li>
+</ul>
+<p>The successful implementation of game theory principles requires what designer Sid Meier calls &quot;elegant complexity&quot; – systems that create deep strategic interaction while remaining accessible and engaging. This balance between theoretical sophistication and practical playability defines the art of modern game design.</p>
+<p>Understanding and applying game theory in design requires constant attention to what economist Thomas Schelling calls &quot;strategic equilibrium&quot; – the balance between competition and cooperation, individual and collective interests, short-term tactics and long-term strategy. This creates what designer Richard Garfield calls &quot;strategic depth horizons&quot; – layers of meaningful interaction that maintain engagement through continued discovery and mastery.</p>
+<p>The ultimate goal of game theory application in design is creating what psychologist Mihaly Csikszentmihalyi calls &quot;optimal experience&quot; – engaging activities that challenge players&#x27; strategic thinking while maintaining accessibility and enjoyment. This requires careful attention to both theoretical principles and practical implementation, creating systems that reward deep engagement while remaining enjoyable at all levels of play.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/book/chapter-04.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/book/chapter-03"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Chapter 3: Behavioral Psychology</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/book/chapter-05"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Chapter 5: Level Up Mechanics</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#decision-making" class="table-of-contents__link toc-highlight">Decision Making</a><ul><li><a href="#nash-equilibrium-in-game-design" class="table-of-contents__link toc-highlight">Nash Equilibrium in Game Design</a></li><li><a href="#perfect-vs-imperfect-information" class="table-of-contents__link toc-highlight">Perfect vs Imperfect Information</a></li><li><a href="#strategic-dominance" class="table-of-contents__link toc-highlight">Strategic Dominance</a></li><li><a href="#mixed-strategies" class="table-of-contents__link toc-highlight">Mixed Strategies</a></li><li><a href="#counterplay-design" class="table-of-contents__link toc-highlight">Counterplay Design</a></li></ul></li><li><a href="#economic-systems" class="table-of-contents__link toc-highlight">Economic Systems</a><ul><li><a href="#virtual-economies" class="table-of-contents__link toc-highlight">Virtual Economies</a></li><li><a href="#trading-mechanics" class="table-of-contents__link toc-highlight">Trading Mechanics</a></li><li><a href="#inflation-control" class="table-of-contents__link toc-highlight">Inflation Control</a></li><li><a href="#resource-sinks" class="table-of-contents__link toc-highlight">Resource Sinks</a></li><li><a href="#market-dynamics" class="table-of-contents__link toc-highlight">Market Dynamics</a></li></ul></li><li><a href="#multiplayer-dynamics" class="table-of-contents__link toc-highlight">Multiplayer Dynamics</a><ul><li><a href="#zero-sum-vs-non-zero-sum-design" class="table-of-contents__link toc-highlight">Zero-sum vs Non-zero-sum Design</a></li><li><a href="#prisoners-dilemma-in-gameplay" class="table-of-contents__link toc-highlight">Prisoner&#39;s Dilemma in Gameplay</a></li><li><a href="#coalition-formation" class="table-of-contents__link toc-highlight">Coalition Formation</a></li><li><a href="#tournament-design" class="table-of-contents__link toc-highlight">Tournament Design</a></li><li><a href="#rating-systems" class="table-of-contents__link toc-highlight">Rating Systems</a></li><li><a href="#rating-systems-continued" class="table-of-contents__link toc-highlight">Rating Systems (continued)</a></li><li><a href="#concluding-thoughts-on-game-theory-applications" class="table-of-contents__link toc-highlight">Concluding Thoughts on Game Theory Applications</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">&gt;docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">_tutorial</a></li></ul></div><div class="col footer__col"><div class="footer__title">&gt;community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">_stack overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">_discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">_twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">&gt;more</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">_blog</a></li><li class="footer__item"><a href="https://github.com/gamedesigns" target="_blank" rel="noopener noreferrer" class="footer__link-item">_github<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">copyright © 2025 daniel sandner. all rights reserved.</div></div></div></footer></div>
+</body>
+</html>
